@@ -1,0 +1,24 @@
+<div class="login">
+  <div class="container">
+    <div class="image">
+      <img src="../../../assets/images/logo-white.svg" alt="" />
+    </div>
+    <form action="">
+      <div class="field">
+        <label>Username</label>
+        <input #username (keyup)="getUserName(username.value)" type="text" />
+        <span class="error"> {{ usernameError }}</span>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input
+          #password
+          (keyup)="getPassword(password.value)"
+          type="password"
+        />
+        <span class="error"> {{ passwordError }}</span>
+      </div>
+      <span class="btn" (click)="submit()">SUBMIT</span>
+    </form>
+  </div>
+</div>
